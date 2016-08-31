@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">The Bar App</string>
+    <string name="welcome">Welcome to The Bar App</string>
+    <string name="add_staff_member">Add Staff Member</string>
+    <string name="view_staff_members">View Staff Members</string>
+    <string name="please_enter_name">Please enter name:</string>
+    <string name="please_enter_surname">Please enter surname:</string>
+    <string name="please_enter_phone_number">Please enter phone number:</string>
+    <string name="please_enter_id_number">Please enter ID number:</string>
+    <string name="please_enter_address">Please enter address:</string>
+    <string name="save">SAVE</string>
+    <string name="back">BACK</string>
+</resources>
