@@ -27,8 +27,7 @@ public class RestStaffAPI implements RestAPI<Staff, Integer> {
         final String url = BASE_URL+"staff/"+id.toString();
         HttpEntity<Staff> requestEntity = new HttpEntity<Staff>(requestHeaders);
         ResponseEntity<Staff> responseEntity = restTemplate.exchange(url, HttpMethod.GET, requestEntity, Staff.class);
-        Staff staff = responseEntity.getBody();
-        return staff;
+        return responseEntity.getBody();
     }
 
     @Override
@@ -53,8 +52,8 @@ public class RestStaffAPI implements RestAPI<Staff, Integer> {
     public String delete(Staff entity) {
         final String url = BASE_URL+"/staff/delete/"+entity.getId().toString();
         HttpEntity<Staff> requestEntity = new HttpEntity<Staff>(entity, requestHeaders);
-        ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.DELETE, requestEntity, String.class);
-        return responseEntity.getBody();
+        ResponseEntity<Staff> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Staff.class);
+        return  responseEntity.getBody().getName();
     }
 
     @Override
